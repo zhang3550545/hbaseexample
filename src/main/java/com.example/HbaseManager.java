@@ -44,7 +44,7 @@ public class HbaseManager {
      */
     private Connection getConnect() throws IOException {
         Configuration configuration = HBaseConfiguration.create();
-//        configuration.set(HConstants.ZOOKEEPER_QUORUM, "dev-bg-01:2181,dev-bg-02:2181,dev-bg-03:2181");
+//        configuration.set(HConstants.ZOOKEEPER_QUORUM, "localhost:2181");
         configuration.set(HConstants.ZOOKEEPER_QUORUM, "localhost");
         return ConnectionFactory.createConnection(configuration);
     }
